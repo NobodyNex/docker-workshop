@@ -5,4 +5,4 @@ FROM nginx:alpine
 COPY . /usr/share/nginx/html
 
 # เปิดพอร์ต 80
-EXPOSE 80
+EXPOSE 8080
