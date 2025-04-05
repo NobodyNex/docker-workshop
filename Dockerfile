@@ -1,8 +1,8 @@
-# ใช้ nginx image ที่เบา
+# ใช้ nginx เป็น base image
 FROM nginx:alpine
 
-# คัดลอกไฟล์ทั้งหมดไปยังโฟลเดอร์ html ของ nginx
+# คัดลอกไฟล์เว็บไซต์ไปที่ nginx folder
 COPY . /usr/share/nginx/html
 
-# เปิดพอร์ต 80
 EXPOSE 80
+CMD ["nginx", "-g", "daemon off;"]
